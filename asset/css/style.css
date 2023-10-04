@@ -701,6 +701,34 @@ text-transform: uppercase;
 }
 
 /* ==========SCROLL========== */
+.scroll_nav{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+
+.scroll_item a{
+  font-size: 18px;
+  font-weight: var(--font-bold);
+  color: #878787;
+  padding-block: 10px;
+  width: 78px;
+  text-align: center;
+  
+}
+
+.scroll_item a.active{
+  height: 78px;
+  border-radius: 50%;
+  line-height: 78px;
+  padding: 0;
+  margin-block: 12px;
+  box-shadow: 0px 15px 83px -3px rgba(0,0,0,0.75);
+  background-color: rgba(135,135,135,0);
+}
+
 .active_header::after{
   content:"";
   position: absolute;

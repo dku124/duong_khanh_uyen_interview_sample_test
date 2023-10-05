@@ -6,6 +6,13 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', scrollHeader)
 
+const scrollBar = () =>{
+  const scrollNav = document.getElementById('scroll-nav')
+  this.scrollY >= 10 ? scrollNav.classList.add('scroll') 
+                     : scrollNav.classList.remove('scroll')
+}
+window.addEventListener('scroll', scrollBar)
+
 
 // SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll('section[id]')
@@ -15,7 +22,7 @@ const scrollActive = () =>{
 
 	sections.forEach(current =>{
 		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
+			  sectionTop = current.offsetTop - 10,
 			  sectionId = current.getAttribute('id'),
 			  sectionsClass = document.querySelector('.nav_item a[href*=' + sectionId + ']')
         scrollClass = document.querySelector('.scroll_item a[href*=' + sectionId + ']')

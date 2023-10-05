@@ -746,6 +746,64 @@ text-transform: uppercase;
 .header.active_header .header_logo::before{
   content: none;
 }
+.scroll_btn{
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.scroll_btn::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.scroll_btn.btn_up::before{
+  background-image:url(../imgs/ico-arr-up.png);
+}
+.scroll_btn.btn_down::before{
+  background-image:url(../imgs/ico-arr-down.png);
+}
+.scroll_btn.btn_up:hover::before{
+  background-image:url(../imgs/ico-arr-up-active.png);
+}
+.scroll_btn.btn_down:hover:before{
+  background-image:url(../imgs/ico-arr-down-active.png);
+}
+.scroll_arrow{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.scroll_arrow::before{
+  content: "";
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 38px;
+  background-color: var(--first-color);
+}
+.scroll_nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+.scroll_nav{
+  padding: 15px;
+  border-radius: 15px;
+}
+.scroll_nav.scroll{
+  box-shadow: 0px 15px 83px -3px rgba(0,0,0,0.75);
+  background-color: var(--white-color);
+}
 /* ==========RESPONSIVE========== */
 /* ==================== */
 /* ==================== */

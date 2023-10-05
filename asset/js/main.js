@@ -1,4 +1,4 @@
-// CHANGE BACKGROUND HEADE
+// CHANGE BACKGROUND HEADER
 const scrollHeader = () =>{
   const header = document.getElementById('header')
   this.scrollY >= 10 ? header.classList.add('active_header') 
@@ -13,10 +13,14 @@ const scrollBar = () =>{
 }
 window.addEventListener('scroll', scrollBar)
 
+// SCROLL UP/DOWN BUTTON
+const btnUp = document.querySelector('.btn_up');
+const btnDown = document.querySelector('.btn_down');
+const interval = 3000;
+const animationDuration = 400;
 
 // SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll('section[id]')
-    
 const scrollActive = () =>{
   	const scrollDown = window.scrollY
 
